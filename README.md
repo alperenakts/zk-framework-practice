@@ -27,12 +27,13 @@ A small application that demonstrates:
 
 ## Project Structure
 
+```text
 src/main/java
-└── com.alperen.zkmini
-├── vm
-├── service
-├── repository
-└── domain
+└── com/alperen/zkmini
+    ├── vm
+    ├── service
+    ├── repository
+    └── domain
 
 ## Purpose
 The purpose of this project is to practice ZK Framework concepts and gain
