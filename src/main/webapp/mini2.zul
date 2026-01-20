@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <window
+        title="Mini App 2 - Listeye Ekle"
+        border="normal"
+        width="420px"
+        style="padding:20px"
+        apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.alperen.zkmini.ListVM')">
+
+        <vlayout spacing="10px">
+
+            <textbox
+                placeholder="İsim"
+                value="@bind(vm.name)"
+                width="200px"/>
+
+            <combobox
+                model="@load(vm.roleTypes)"
+                selectedItem="@bind(vm.role)"
+                readonly="true"
+                width="200px">
+
+                <template name="model">
+                    <comboitem label="${each.label}" value="${each}"/>
+                </template>
+
+            </combobox>
+
+
+            <button
+                label="Ekle"
+                onClick="@command('addUser')"/>
+
+            <button
+                label="Sil"
+                onClick="@command('deleteSelected')"/>
+
+            <separator/>
+
+            <label value="Liste:"/>
+
+            <listbox
+                model="@load(vm.users)"
+                selectedItem="@bind(vm.selectedUser)"
+                width="300px">
+
+                <template name="model">
+                    <listitem>
+                        <listcell label="${each.name}"/>
+                        <listcell label="${each.role.label}"/>
+                    </listitem>
+                </template>
+
+            </listbox>
+
+
+        </vlayout>
+
+    </window>
+
+</zk>

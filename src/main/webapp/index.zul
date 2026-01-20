@@ -1,0 +1,22 @@
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <window
+        title="ZK 6.5.2 - Mini Counter"
+        border="normal"
+        width="420px"
+        style="padding:20px"
+        apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.alperen.zkmini.CounterVM')">
+
+
+        <hlayout spacing="10px">
+            <label value="Count:"/>
+            <label value="@load(vm.count)"/>
+        </hlayout>
+
+        <separator/>
+
+        <button label="Increase"
+                onClick="@command('increase')"/>
+    </window>
+</zk>
