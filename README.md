@@ -34,7 +34,8 @@ src/main/java
     ├── service
     ├── repository
     └── domain
-
+```
 ## Purpose
 The purpose of this project is to practice ZK Framework concepts and gain
 hands-on experience with MVVM-based UI development.
+
